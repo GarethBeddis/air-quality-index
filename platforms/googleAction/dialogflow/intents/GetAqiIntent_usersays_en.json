@@ -1,0 +1,110 @@
+[
+	{
+		"data": [
+			{
+				"text": "location",
+				"userDefined": true,
+				"alias": "location",
+				"meta": "@sys.geo-city"
+			}
+		],
+		"isTemplate": false,
+		"count": 0
+	},
+	{
+		"data": [
+			{
+				"text": "get aqi ",
+				"userDefined": false
+			},
+			{
+				"text": "location",
+				"userDefined": true,
+				"alias": "location",
+				"meta": "@sys.geo-city"
+			}
+		],
+		"isTemplate": false,
+		"count": 0
+	},
+	{
+		"data": [
+			{
+				"text": "get aqi for ",
+				"userDefined": false
+			},
+			{
+				"text": "location",
+				"userDefined": true,
+				"alias": "location",
+				"meta": "@sys.geo-city"
+			}
+		],
+		"isTemplate": false,
+		"count": 0
+	},
+	{
+		"data": [
+			{
+				"text": "what is the air quality index of ",
+				"userDefined": false
+			},
+			{
+				"text": "location",
+				"userDefined": true,
+				"alias": "location",
+				"meta": "@sys.geo-city"
+			}
+		],
+		"isTemplate": false,
+		"count": 0
+	},
+	{
+		"data": [
+			{
+				"text": "what's the aqi of ",
+				"userDefined": false
+			},
+			{
+				"text": "location",
+				"userDefined": true,
+				"alias": "location",
+				"meta": "@sys.geo-city"
+			}
+		],
+		"isTemplate": false,
+		"count": 0
+	},
+	{
+		"data": [
+			{
+				"text": "what's the pollution like in ",
+				"userDefined": false
+			},
+			{
+				"text": "location",
+				"userDefined": true,
+				"alias": "location",
+				"meta": "@sys.geo-city"
+			}
+		],
+		"isTemplate": false,
+		"count": 0
+	},
+	{
+		"data": [
+			{
+				"text": "tell me about pollution in ",
+				"userDefined": false
+			},
+			{
+				"text": "location",
+				"userDefined": true,
+				"alias": "location",
+				"meta": "@sys.geo-city"
+			}
+		],
+		"isTemplate": false,
+		"count": 0
+	}
+]

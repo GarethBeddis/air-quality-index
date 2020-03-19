@@ -1,0 +1,40 @@
+{
+	"interactionModel": {
+		"languageModel": {
+			"invocationName": "my test app",
+			"types": [],
+			"intents": [
+				{
+					"name": "GetAqiIntent",
+					"samples": [
+						"{location}",
+						"get aqi {location}",
+						"get aqi for {location}",
+						"what is the air quality index of {location}",
+						"what's the aqi of {location}",
+						"what's the pollution like in {location}",
+						"tell me about pollution in {location}"
+					],
+					"slots": [
+						{
+							"name": "location",
+							"type": "AMAZON.City"
+						}
+					]
+				},
+				{
+					"name": "AMAZON.CancelIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.HelpIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.StopIntent",
+					"samples": []
+				}
+			]
+		}
+	}
+}

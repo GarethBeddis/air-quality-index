@@ -1,0 +1,48 @@
+{
+	"manifest": {
+		"publishingInformation": {
+			"locales": {
+				"en-US": {
+					"summary": "Sample Short Description",
+					"examplePhrases": [
+						"Alexa open hello world"
+					],
+					"keywords": [
+						"hello",
+						"world"
+					],
+					"name": "air-quality-index",
+					"description": "Sample Full Description",
+					"smallIconUri": "https://via.placeholder.com/108/09f/09f.png",
+					"largeIconUri": "https://via.placeholder.com/512/09f/09f.png"
+				}
+			},
+			"isAvailableWorldwide": true,
+			"testingInstructions": "Sample Testing Instructions.",
+			"category": "EDUCATION_AND_REFERENCE",
+			"distributionCountries": []
+		},
+		"apis": {
+			"custom": {
+				"endpoint": {
+					"sslCertificateType": "Wildcard",
+					"uri": "https://webhook.jovo.cloud/9ff9ad5c-a452-4b15-9375-7be3b7ec8fe1"
+				}
+			}
+		},
+		"manifestVersion": "1.0",
+		"privacyAndCompliance": {
+			"allowsPurchases": false,
+			"locales": {
+				"en-US": {
+					"privacyPolicyUrl": "http://example.com/policy",
+					"termsOfUseUrl": ""
+				}
+			},
+			"isExportCompliant": true,
+			"containsAds": false,
+			"isChildDirected": false,
+			"usesPersonalInfo": false
+		}
+	}
+}

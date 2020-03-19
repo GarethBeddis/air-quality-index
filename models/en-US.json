@@ -1,0 +1,66 @@
+{
+	"invocation": "air quality index",
+	"intents": [
+		{
+			"name": "GetAqiIntent",
+			"phrases": [
+				"{location}",
+				"get aqi {location}",
+				"get aqi for {location}",
+				"what is the air quality index of {location}",
+				"what's the aqi of {location}",
+				"what's the pollution like in {location}",
+				"tell me about pollution in {location}"
+			],
+			"inputs": [
+				{
+					"name": "location",
+					"type": {
+						"alexa": "AMAZON.City",
+						"dialogflow": "@sys.geo-city" 
+					}
+				}
+			]
+		}
+	],
+	"alexa": {
+		"interactionModel": {
+			"languageModel": {
+				"intents": [
+					{
+						"name": "AMAZON.CancelIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.HelpIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.StopIntent",
+						"samples": []
+					}
+				]
+			}
+		}
+	},
+	"dialogflow": {
+		"intents": [
+			{
+				"name": "Default Fallback Intent",
+				"auto": true,
+				"webhookUsed": true,
+				"fallbackIntent": true
+			},
+			{
+				"name": "Default Welcome Intent",
+				"auto": true,
+				"webhookUsed": true,
+				"events": [
+					{
+						"name": "WELCOME"
+					}
+				]
+			}
+		]
+	}
+}

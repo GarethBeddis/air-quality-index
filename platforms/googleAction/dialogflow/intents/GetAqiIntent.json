@@ -1,0 +1,17 @@
+{
+	"name": "GetAqiIntent",
+	"auto": true,
+	"webhookUsed": true,
+	"responses": [
+		{
+			"parameters": [
+				{
+					"isList": false,
+					"name": "location",
+					"value": "$location",
+					"dataType": "@sys.geo-city"
+				}
+			]
+		}
+	]
+}
