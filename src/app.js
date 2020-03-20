@@ -89,13 +89,80 @@ app.setHandler({
                 const aqi = response.data.aqi;
                 const indexScale = getAqiCondition(aqi);
                 const speakOutput = `The Air Quality Index rating in ${this.$inputs.location.value} is currently ${indexScale} at ${aqi}`;
+
+                // Retrieve document and data from folder
+                this.$alexaSkill.addDirective({
+                    type: 'Alexa.Presentation.APL.RenderDocument',
+                    version: '1.0',
+                    document: require(`./apl/aqi-template/document.json`),
+                    datasources: getDataSource(this.$inputs.location.value, indexScale, aqi)
+                });
                 this.tell(speakOutput);
+
             } else {
                 this.tell(`Sorry, I can't find any data for that location!`);
             }
         });
     },
+
 });
+
+// APL Data source
+let getDataSource = (location, indexScale, aqi) => {
+    let dataSource = {
+        "bodyTemplate6Data": {
+            "type": "object",
+            "objectId": "bt6Sample",
+            "backgroundImage": {
+                "contentDescription": null,
+                "smallSourceUrl": null,
+                "largeSourceUrl": null,
+                "sources": [
+                    {
+                        "url": "https://d2o906d8ln7ui1.cloudfront.net/images/BT6_Background.png",
+                        "size": "small",
+                        "widthPixels": 0,
+                        "heightPixels": 0
+                    },
+                    {
+                        "url": "https://d2o906d8ln7ui1.cloudfront.net/images/BT6_Background.png",
+                        "size": "large",
+                        "widthPixels": 0,
+                        "heightPixels": 0
+                    }
+                ]
+            },
+            "image": {
+                "contentDescription": null,
+                "smallSourceUrl": null,
+                "largeSourceUrl": null,
+                "sources": [
+                    {
+                        "url": "http://images.media-allrecipes.com/userphotos/250x250/303241.jpg",
+                        "size": "small",
+                        "widthPixels": 0,
+                        "heightPixels": 0
+                    },
+                    {
+                        "url": "http://images.media-allrecipes.com/userphotos/250x250/303241.jpg",
+                        "size": "large",
+                        "widthPixels": 0,
+                        "heightPixels": 0
+                    }
+                ]
+            },
+            "textContent": {
+                "primaryText": {
+                    "type": "PlainText",
+                    "text": `Air quality in ${location} is ${indexScale} at ${aqi}`
+                }
+            },
+            "logoUrl": "https://d2o906d8ln7ui1.cloudfront.net/images/cheeseskillicon.png",
+            "hintText": ""
+        }
+    }
+    return dataSource;
+}
 
 module.exports.app = app;
 

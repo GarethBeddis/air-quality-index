@@ -27,7 +27,12 @@
 				"endpoint": {
 					"sslCertificateType": "Wildcard",
 					"uri": "https://webhook.jovo.cloud/9ff9ad5c-a452-4b15-9375-7be3b7ec8fe1"
-				}
+				},
+				"interfaces": [
+					{
+						"type": "ALEXA_PRESENTATION_APL"
+					}
+				]
 			}
 		},
 		"manifestVersion": "1.0",
