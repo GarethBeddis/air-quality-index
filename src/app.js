@@ -32,6 +32,7 @@ app.setHandler({
         this.$speech.addText(`Hi! I can give you information on pollution across any city in the world. What city would you like to know about?`)
         this.$reprompt.addText(`What city would you like to know about?`)
         this.ask(this.$speech, this.$reprompt)
+        console.debug(`User data: ${this.$user}`)
     },
     
     async NEW_USER() {
@@ -57,7 +58,9 @@ app.setHandler({
 
     MyCityIsIntent(input) {
         this.$user.$data.location = this.$inputs.location.value;
-        this.$speech(`Thanks, I'll remember that you live in ${this.$user.location.value} from now on.`)  
+        this.$speech(`Thanks, I'll remember that you live in ${this.$user.location.value} from now on.`);
+        this.followUpState('GetAqiIntent')
+            .tell(this.$speech)
     },
 
     async GetAqiIntent(input) {
